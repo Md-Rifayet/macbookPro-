@@ -1,0 +1,36 @@
+body{
+    margin: 30px;
+    
+}
+
+.body-div{
+    border-bottom: 2px solid rgb(241, 223, 223);
+}
+
+.memory-btn:hover{
+    background-color: rgb(232, 223, 223);
+    
+}
+
+
+.price{
+    width: 350px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    border-bottom: 2px solid rgb(231, 219, 219);
+}
+
+#delivery-charge-div{
+    border-bottom: 2px solid black;
+}
+
+.code-btn{
+    width: 100px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+footer{
+    text-align: center;
+    margin: 10px;
+}
