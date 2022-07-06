@@ -32,6 +32,13 @@ const totalPriceValue = parseInt(totalPriceInput)
 
 totalPrice.innerText = totalPriceValue + productCost;
 
+// footer total price
+let finalPrice = document.getElementById("finalPrice")
+let finalPriceInput = finalPrice.innerText;
+const finalPriceValue = parseInt(finalPriceInput);
+
+finalPrice.innerText = totalPriceValue + productCost;
+
 }
 
 // 8GB Unified Memory
@@ -47,6 +54,13 @@ document.getElementById("8GbMemory-btn").addEventListener('click', function(){
     let memoryCostValue = parseInt(memoryCostInput);
 
     total.innerText = totalInputValue - memoryCostValue;
+
+    // footer total price
+    let finalPrice = document.getElementById("finalPrice")
+    let finalPriceInput = finalPrice.innerText;
+    const finalPriceValue = parseInt(finalPriceInput);
+
+    finalPrice.innerText = totalPriceValue - memoryCostValue;
     
 
 forDefaultButton("memory-cost", "16GbMemory-btn")
@@ -74,6 +88,14 @@ let storageCostInput =storageCost.innerText
 let storageCostValue = parseInt(storageCostInput);
 
 total.innerText = totalInputValue - storageCostValue;
+
+// footer total price
+let finalPrice = document.getElementById("finalPrice")
+let finalPriceInput = finalPrice.innerText;
+const finalPriceValue = parseInt(finalPriceInput);
+
+finalPrice.innerText = totalInputValue - storageCostValue;
+
 
 forDefaultButton("storage-price", "512GbSSD-btn", "1TbSSD-btn");
 })
@@ -137,6 +159,12 @@ document.getElementById("free-delivery").addEventListener('click', function(){
 
     total.innerText = totalInputValue - deliveryCostValue;
 
+    // footer total price
+    let finalPrice = document.getElementById("finalPrice")
+    let finalPriceInput = finalPrice.innerText;
+    const finalPriceValue = parseInt(finalPriceInput);
+    finalPrice.innerText =  totalInputValue - deliveryCostValue;
+
     forDefaultButton("delivery-charge", "paid-delivery")
 })
 
@@ -146,15 +174,3 @@ document.getElementById("paid-delivery").addEventListener('click', function(){
 
     totalPrice(20);
 })
-
-let totalPrices = document.getElementById("total-price");
-let totalPriceInput = totalPrices.innerText;
-let totalPriceValue = parseInt(totalPriceInput);
-
-console.log(totalPriceValue)
-
-let finalPrice = document.getElementById("finalPrice")
-let finalPriceInput = parseFloat(finalPrice);
-
-finalPrice.innerText == totalPriceValue;
-
