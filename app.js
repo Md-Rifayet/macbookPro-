@@ -24,7 +24,7 @@ function additionalPrice(addPriceId, price, buttonId, productCostId, priceLimit)
     }
 }
 
-
+// total price function
 function totalPrice(productCost){
 const totalPrice = document.getElementById("total-price");
 const totalPriceInput = totalPrice.innerText;
@@ -36,9 +36,7 @@ totalPrice.innerText = totalPriceValue + productCost;
 let finalPrice = document.getElementById("finalPrice")
 let finalPriceInput = finalPrice.innerText;
 const finalPriceValue = parseInt(finalPriceInput);
-
 finalPrice.innerText = totalPriceValue + productCost;
-
 }
 
 // 8GB Unified Memory
@@ -62,18 +60,14 @@ document.getElementById("8GbMemory-btn").addEventListener('click', function(){
 
     finalPrice.innerText = totalPriceValue - memoryCostValue;
     
-
 forDefaultButton("memory-cost", "16GbMemory-btn")
-
-
 })
 
 // 16GB Unified Memory
 document.getElementById("16GbMemory-btn").addEventListener('click', function(){
 
     additionalPrice("memory-cost", 180 , "16GbMemory-btn", "memory-cost", 180);
-    totalPrice(180)
-   
+    totalPrice(180) 
 })
 
 // 256GB SSD Storage
@@ -96,18 +90,14 @@ const finalPriceValue = parseInt(finalPriceInput);
 
 finalPrice.innerText = totalInputValue - storageCostValue;
 
-
 forDefaultButton("storage-price", "512GbSSD-btn", "1TbSSD-btn");
 })
 
 // 512GB SSD Storage
 document.getElementById("512GbSSD-btn").addEventListener('click', function(){
 
-
-
     additionalPrice("storage-price", 100, "512GbSSD-btn", "storage-price", 100)
     
-
     const oneTBstorage = document.getElementById("1TbSSD-btn");
 
     const totalPrices = document.getElementById("total-price");
@@ -142,8 +132,6 @@ document.getElementById("1TbSSD-btn").addEventListener('click', function(){
     //     totalPrices.innerText = totalPriceValue + 180;
     // }
     totalPrice(180)
-    
-   
 })
 
 // free delivery Charge
@@ -165,7 +153,7 @@ document.getElementById("free-delivery").addEventListener('click', function(){
     const finalPriceValue = parseInt(finalPriceInput);
     finalPrice.innerText =  totalInputValue - deliveryCostValue;
 
-    forDefaultButton("delivery-charge", "paid-delivery")
+    forDefaultButton("delivery-charge", "paid-delivery");
 })
 
 // Paid delivery charge
