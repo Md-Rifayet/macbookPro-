@@ -23,37 +23,39 @@
         <p class="p-3 text-xl"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium repudiandae voluptates repellendus aliquid, molestiae est nulla exercitationem placeat eos quasi obcaecati beatae? Placeat nostrum ipsam voluptate, est quia cumque a.</p>
 </head>
 <main class="p-3 ">
-
+<!-- Memory Part -->
    <div class="memory-input mb-8">
     <h1 class="text-xl font-medium">Memory</h1>
    <div class="mt-3">
-    <button class="memory-btn border-solid border-2 border-gray-400 rounded
+    <button id="8GbMemory-btn" class="memory-btn border-solid border-2 border-gray-400 rounded
     px-2 p-1">8GB Unified Memory</button>
-    <button class="memory-btn border-solid border-2 border-gray-400 rounded
+    <button id="16GbMemory-btn" class="memory-btn border-solid border-2 border-gray-400 rounded
     px-2 p-1">16GB Unified Memory</button>
    </div>
    </div>
 
+   <!-- Storage Part -->
    <div class="storage-input mb-8">
     <h1 class="text-xl font-medium">Storage</h1>
     <div class="mt-3">
-        <button class="memory-btn border-solid border-2 border-gray-400 rounded
+        <button id="256GbSSD-btn" class="memory-btn border-solid border-2 border-gray-400 rounded
     px-1 p-1">256GB SSD Storage</button>
 
-    <button class="memory-btn border-solid border-2 border-gray-400 rounded
+    <button id="512GbSSD-btn"  class="memory-btn border-solid border-2 border-gray-400 rounded
     px-1 p-1">512GB SSD Storage</button>
 
-    <button class="memory-btn border-solid border-2 border-gray-400 rounded
+    <button id="1TbSSD-btn" class="memory-btn border-solid border-2 border-gray-400 rounded
     px-1 p-1">1TB SSD Storage</button>
    </div>
     </div>
-
+<!-- Delivery Part -->
     <div class="memory-input mb-8">
         <h1 class="text-xl font-medium">Choice Your Delivery Option</h1>
        <div class="mt-3">
-        <button class="memory-btn border-solid border-2 border-gray-400 rounded
+        <button id="free-delivery" class="memory-btn border-solid border-2 border-gray-400 rounded
         px-2 p-1">Friday, Aug 25 FREE Prime Delivery</button>
-        <button class="memory-btn border-solid border-2 border-gray-400 rounded
+
+        <button id="paid-delivery" class="memory-btn border-solid border-2 border-gray-400 rounded
         px-2 p-1">Friday, Aug 21 Delivery charge $20</button>
        </div>
        </div>
@@ -67,19 +69,19 @@
 
           <div class="price">
             <div class="font-bold mb-1">Extra Memory Cost</div>
-            <div class="font-bold  mb-1">$0</div>
+            <div class="font-bold  mb-1">$ <span id="memory-cost">0</span></div>
           </div>
           <div class="price">
             <div class="font-bold mb-1">Extra Storage Cost</div>
-            <div class="font-bold  mb-1">$0</div>
+            <div class="font-bold  mb-1">$ <span id="storage-price">0</span></div>
           </div>
           <div id="delivery-charge-div" class="price">
             <div class="font-bold mb-1">Delivery charge</div>
-            <div class="font-bold  mb-1">$0</div>
+            <div class="font-bold  mb-1">$ <span id="delivery-charge">0</span></div>
           </div>
           <div class="price">
             <div id="" class="font-bold mb-1">Total Price</div>
-            <div class="font-bold  mb-1">$1299</div>
+            <div class="font-bold  mb-1">$ <span id="total-price">1299</span></div>
           </div>
        </div>
 <!-- Price Part End -->
@@ -102,7 +104,9 @@
 </div>
 
 <footer>
-    <h1 class="font-semibold text-4xl">Total: $1299 </h1>
+    <h1 class="font-semibold text-4xl">Total: $<span id="finalPrice">1299</span> </h1>
 </footer>
+
+<script src="app.js"></script>
 </body>
 </html>
